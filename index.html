@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NBA Hub — Equipos, Partidos y Highlights</title>
+    <meta name="description" content="Portal NBA con equipos destacados, calendario, galería y contacto.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="border-bottom">
+        <nav class="navbar navbar-expand-lg container-xxl" aria-label="Navegación principal">
+            <a class="navbar-brand fw-semibold" href="./index.html">NBA Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="mainNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./equipos.html">Equipos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./calendario.html">Calendario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./galeria.html">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#contacto">Contacto</a></li>
+                </ul>
+
+                <div class="ms-lg-3">
+                    <button id="themeToggle" class="btn btn-outline-secondary btn-sm" type="button"
+                        aria-pressed="false">
+                        Modo oscuro
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="hero position-relative text-white">
+        <div class="hero__bg" role="img" aria-label="Cancha de la NBA iluminada con tablero y aro"></div>
+        <div class="container-xxl position-relative py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-4 fw-bold lh-1 mb-3">Tu portal de la NBA</h1>
+                    <p class="lead opacity-90">
+                        Equipos, próximos partidos y momentos épicos, todo en un solo lugar.
+                    </p>
+                    <a class="btn btn-primary btn-lg mt-2" href="./equipos.html">Ver equipos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Equipos -->
+        <section id="equipos" class="py-5">
+            <div class="container-xxl">
+                <header class="mb-4">
+                    <h2 class="h1">Equipos destacados</h2>
+                    <p class="text-body-secondary">Un vistazo rápido a franquicias icónicas.</p>
+                </header>
+
+                <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+                    <!-- Card 1 -->
+                    <article class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="ratio ratio-16x9">
+                                <img class="img-cover" src="./assets/img/lakers.jpg"
+                                    alt="Los Angeles Lakers en el Crypto.com Arena" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="h5 card-title">Los Angeles Lakers</h3>
+                                <p class="card-text flex-grow-1">Historia ganadora, figuras legendarias y noches de
+                                    Hollywood.</p>
+                                <ul class="list-unstyled small text-body-secondary mb-3">
+                                    <li>• Conferencia Oeste</li>
+                                    <li>• Clásicos inolvidables</li>
+                                </ul>
+                                <a class="btn btn-outline-primary mt-auto" href="#"
+                                    aria-label="Ver detalles de Los Angeles Lakers">Ver más</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="ratio ratio-16x9">
+                                <img class="img-cover" src="./assets/img/celtics.jpg"
+                                    alt="Boston Celtics celebrando en el TD Garden" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="h5 card-title">Boston Celtics</h3>
+                                <p class="card-text flex-grow-1">Tradición, defensa férrea y cultura de equipo.</p>
+                                <ul class="list-unstyled small text-body-secondary mb-3">
+                                    <li>• Conferencia Este</li>
+                                    <li>• Rivalidad histórica con Lakers</li>
+                                </ul>
+                                <a class="btn btn-outline-primary mt-auto" href="#"
+                                    aria-label="Ver detalles de Boston Celtics">Ver más</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="ratio ratio-16x9">
+                                <img class="img-cover" src="./assets/img/warriors.jpg"
+                                    alt="Golden State Warriors en el Chase Center" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="h5 card-title">Golden State Warriors</h3>
+                                <p class="card-text flex-grow-1">Revolución del triple y ofensiva dinámica.</p>
+                                <ul class="list-unstyled small text-body-secondary mb-3">
+                                    <li>• Conferencia Oeste</li>
+                                    <li>• Dinastía reciente</li>
+                                </ul>
+                                <a class="btn btn-outline-primary mt-auto" href="#"
+                                    aria-label="Ver detalles de Golden State Warriors">Ver más</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendario -->
+        <section id="calendario" class="py-5 bg-body-tertiary">
+            <div class="container-xxl">
+                <header class="mb-4">
+                    <h2 class="h1">Próximos partidos</h2>
+                    <p class="text-body-secondary">Fechas tentativas para la demo. Podés ligarlo a datos reales más
+                        adelante.</p>
+                </header>
+
+                <div class="table-responsive">
+                    <table class="table align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Local</th>
+                                <th scope="col">Visitante</th>
+                                <th scope="col" class="text-end">Arena</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>05/10/2025</td>
+                                <td>Lakers</td>
+                                <td>Warriors</td>
+                                <td class="text-end">Crypto.com Arena</td>
+                            </tr>
+                            <tr>
+                                <td>08/10/2025</td>
+                                <td>Celtics</td>
+                                <td>Heat</td>
+                                <td class="text-end">TD Garden</td>
+                            </tr>
+                            <tr>
+                                <td>12/10/2025</td>
+                                <td>Suns</td>
+                                <td>Nuggets</td>
+                                <td class="text-end">Footprint Center</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="small text-body-secondary mb-0">* Solo demostrativo; para data real podés conectar una API en
+                    el futuro.</p>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section id="galeria" class="py-5">
+            <div class="container-xxl">
+                <header class="mb-4">
+                    <h2 class="h1">Galería NBA</h2>
+                    <p class="text-body-secondary">Jugadas, estadios y momentos icónicos.</p>
+                </header>
+
+                <div class="gallery-grid" aria-label="Galería de imágenes de la NBA">
+                    <figure class="tile ratio ratio-16x9"><img class="img-cover" src="./assets/img/nba-1.jpg"
+                            alt="Dunk espectacular"></figure>
+                    <figure class="tile ratio ratio-16x9"><img class="img-cover" src="./assets/img/nba-2.jpg"
+                            alt="Estadio NBA repleto"></figure>
+                    <figure class="tile ratio ratio-16x9"><img class="img-cover" src="./assets/img/nba-3.jpg"
+                            alt="Triple desde la esquina"></figure>
+                    <figure class="tile ratio ratio-16x9"><img class="img-cover" src="./assets/img/nba-4.jpg"
+                            alt="Tablero y aro iluminados"></figure>
+                    <figure class="tile ratio ratio-16x9"><img class="img-cover" src="./assets/img/nba-5.jpg"
+                            alt="Celebración del equipo campeón"></figure>
+                    <figure class="tile ratio ratio-16x9"><img class="img-cover" src="./assets/img/nba-6.jpg"
+                            alt="Parquet con logo de la NBA"></figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="py-5 bg-body-tertiary">
+            <div class="container-xxl">
+                <header class="mb-4">
+                    <h2 class="h1">Contacto</h2>
+                    <p class="text-body-secondary">Sugerencias, prensa o colaboraciones.</p>
+                </header>
+
+                <form id="contactForm" novalidate class="row g-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" id="name" name="name" class="form-control" required />
+                        <div class="invalid-feedback">Ingresá tu nombre.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Correo</label>
+                        <input type="email" id="email" name="email" class="form-control" required />
+                        <div class="invalid-feedback">Ingresá un correo válido.</div>
+                    </div>
+                    <div class="col-12">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea id="message" name="message" class="form-control" rows="4" minlength="10"
+                            required></textarea>
+                        <div class="invalid-feedback">Escribí al menos 10 caracteres.</div>
+                    </div>
+                    <div class="col-12 d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+                    </div>
+                    <p id="formAlert" class="visually-hidden mb-0" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top">
+        <div class="container-xxl d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+            <small class="text-body-secondary">© 2025 NBA Hub (demo académica)</small>
+            <nav aria-label="Enlaces legales">
+                <a class="link-secondary me-3" href="#" rel="nofollow">Privacidad</a>
+                <a class="link-secondary" href="#" rel="nofollow">Términos</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+:root{
+  --brand: #1d428a;        
+  --brand-ink: #0e2147;
+  --accent: #c8102e;        
+  --ink: #212529;
+  --muted: #6c757d;
+  --radius-xl: 1.25rem;
+  --shadow-sm: 0 6px 18px rgba(0,0,0,.06);
+}
+
+/* Reset y base */
+* { box-sizing: border-box; }
+html, body { scroll-behavior: smooth; }
+img { max-width: 100%; height: auto; display: block; }
+.container-xxl { padding-inline: clamp(1rem, 2vw, 2rem); }
+body { overflow-x: hidden; }
+
+h1, .display-4 { font-size: clamp(2rem, 2.5vw + 1rem, 3.25rem); }
+h2 { font-size: clamp(1.5rem, 1.6vw + 1rem, 2.25rem); }
+
+/* Hero */
+.hero { min-height: 60vh; display: grid; align-items: center; position: relative; }
+.hero__bg{
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+    url('../img/hero-nba.jpg') center/cover no-repeat;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* Cards */
+.card { border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,.06); }
+
+/* Imagen que llena contenedores con .ratio */
+.img-cover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Galería */
+.gallery-grid{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.tile{
+  border-radius: .75rem;
+  overflow: hidden;          
+  box-shadow: var(--shadow-sm);
+}
+
+/* Botones y tabla */
+.btn-primary{
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: #163469;
+  --bs-btn-hover-border-color: #163469;
+}
+.btn-outline-primary{
+  --bs-btn-color: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand);
+  --bs-btn-hover-border-color: var(--brand);
+}
+.table thead { border-top: 3px solid var(--accent); }
+
+/* Box-model demo*/
+.box-demo{
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 3px dashed var(--accent);
+  background: rgba(200,16,46,.06);
+  border-radius: .75rem;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark){
+  :root { color-scheme: dark; }
+}
+[data-bs-theme="dark"] .hero__bg{ filter: brightness(.8) saturate(1.1); }
+
+/* Media query explícita*/
+@media (max-width: 480px){
+  header .display-6 { font-size: 1.35rem; }
+  .box-demo { padding: .75rem; border-width: 2px; }
+}
+
+/* Utils */
+.opacity-90 { opacity: .9; }
