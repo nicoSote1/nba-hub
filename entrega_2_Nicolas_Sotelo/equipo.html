@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NBA Hub — Equipo</title>
+  <meta name="description" content="Detalle de equipo NBA con tabs de plantel, estadísticas y arena.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./assets/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="border-bottom">
+    <nav class="navbar navbar-expand-lg container-xxl">
+      <a class="navbar-brand fw-semibold" href="./index.html">NBA Hub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="./equipos.html">Equipos</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#calendario">Calendario</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#contacto">Contacto</a></li>
+        </ul>
+        <div class="ms-lg-3">
+          <button id="themeToggle" class="btn btn-outline-secondary btn-sm" type="button">Modo oscuro</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sub-hero del equipo -->
+  <section class="position-relative text-white" style="min-height:36vh;">
+    <div class="hero__bg" style="background-image:
+      linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+      url('./assets/img/hero-nba.jpg');"></div>
+    <div class="container-xxl position-relative py-5">
+      <h1 class="display-6 fw-bold">Equipo — Demo</h1>
+      <p class="opacity-90 mb-0">Ficha técnica, roster y su estadio.</p>
+    </div>
+  </section>
+
+  <main class="py-5">
+    <div class="container-xxl">
+      <!-- Tabs -->
+      <ul class="nav nav-tabs" id="teamTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="plantel-tab" data-bs-toggle="tab" data-bs-target="#plantel" type="button" role="tab">Plantel</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="stats-tab" data-bs-toggle="tab" data-bs-target="#stats" type="button" role="tab">Stats</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="arena-tab" data-bs-toggle="tab" data-bs-target="#arena" type="button" role="tab">Arena</button>
+        </li>
+      </ul>
+
+      <div class="tab-content pt-4" id="teamTabsContent">
+        <!-- Plantel -->
+        <section class="tab-pane fade show active" id="plantel" role="tabpanel" aria-labelledby="plantel-tab">
+          <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+            <!-- Jugador demo -->
+            <article class="col">
+              <div class="card h-100 shadow-sm">
+                <div class="ratio ratio-16x9">
+                  <img class="img-cover" src="./assets/img/nba-3.jpg" alt="Escolta lanzando triple">
+                </div>
+                <div class="card-body">
+                  <h3 class="h6 mb-1">#30 — Guard</h3>
+                  <p class="mb-2 text-body-secondary">Triplero — 28.3 PTS, 6.1 AST, 1.2 STL</p>
+                  <ul class="small text-body-secondary mb-0">
+                    <li>Altura: 1.88 m</li>
+                    <li>Peso: 84 kg</li>
+                    <li>Universidad: Demo U</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <!-- Jugador demo 2 -->
+            <article class="col">
+              <div class="card h-100 shadow-sm">
+                <div class="ratio ratio-16x9">
+                  <img class="img-cover" src="./assets/img/nba-1.jpg" alt="Alero con volcada (dunk)">
+                </div>
+                <div class="card-body">
+                  <h3 class="h6 mb-1">#7 — Forward</h3>
+                  <p class="mb-2 text-body-secondary">Atletismo — 22.1 PTS, 7.4 REB</p>
+                  <ul class="small text-body-secondary mb-0">
+                    <li>Altura: 2.03 m</li>
+                    <li>Peso: 102 kg</li>
+                    <li>Universidad: Demo State</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <!-- Jugador demo 3 -->
+            <article class="col">
+              <div class="card h-100 shadow-sm">
+                <div class="ratio ratio-16x9">
+                  <img class="img-cover" src="./assets/img/nba-5.jpg" alt="Pivot celebrando">
+                </div>
+                <div class="card-body">
+                  <h3 class="h6 mb-1">#13 — Center</h3>
+                  <p class="mb-2 text-body-secondary">Protector del aro — 2.1 BLK, 10.8 REB</p>
+                  <ul class="small text-body-secondary mb-0">
+                    <li>Altura: 2.13 m</li>
+                    <li>Peso: 113 kg</li>
+                    <li>Universidad: Demo College</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="tab-pane fade" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="table-responsive">
+                <table class="table align-middle">
+                  <thead class="table-light">
+                    <tr><th>Temporada</th><th>W</th><th>L</th><th>Win%</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>2022-23</td><td>53</td><td>29</td><td>0.646</td></tr>
+                    <tr><td>2023-24</td><td>57</td><td>25</td><td>0.695</td></tr>
+                    <tr><td>2024-25</td><td>—</td><td>—</td><td>—</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="small text-body-secondary mb-0">* Datos de ejemplo para la entrega (sin API).</p>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="ratio ratio-16x9 tile">
+                <img class="img-cover" src="./assets/img/nba-2.jpg" alt="Vista aérea del estadio en partido">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Arena -->
+        <section class="tab-pane fade" id="arena" role="tabpanel" aria-labelledby="arena-tab">
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="ratio ratio-16x9 tile">
+                <img class="img-cover" src="./assets/img/hero-nba.jpg" alt="Panorámica de la arena del equipo">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h3 class="h5">Arena — Datos</h3>
+              <ul class="mb-3">
+                <li>Capacidad: ~18.000</li>
+                <li>Ciudad: Demo City</li>
+                <li>Inauguración: 2010</li>
+              </ul>
+              <!-- Mapa embebido (placeholder) -->
+              <div class="ratio ratio-16x9 tile">
+                <iframe src="https://maps.google.com/maps?q=madison%20square%20garden&t=&z=13&ie=UTF8&iwloc=&output=embed" title="Mapa de la arena" loading="lazy" style="border:0;"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4 border-top">
+    <div class="container-xxl d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+      <small class="text-body-secondary">© 2025 NBA Hub (demo académica)</small>
+      <nav><a class="link-secondary" href="./equipos.html">Volver a Equipos</a></nav>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="./assets/js/script.js" defer></script>
+</body>
+</html>
